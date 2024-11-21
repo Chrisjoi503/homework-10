@@ -1,0 +1,28 @@
+1. What are PDOs? What is a DSN?
+PDOs is a built in class with PHP to make it easy to interact with databases and they also DOs manage and represent the 
+connection to the database. We are able to run queries to it by giving input in SQL using PHP and recieve results from the databases. 
+
+DSN is a string that we use to instantiate PDO objects and represents the connection to our database. This string contains information out our connection 
+and should come from our .env file.
+
+2. What are .env files? What are .gitignore files?
+.env files are files that contains enviornment variables. It exists in the OS that we are running our application on and they set 
+avriables specific to our enviorment. The enviorment variables that they contain  are variable whose value is set outside the program,
+typically through a functionality built into the operating system.
+
+,gitignore files is how we will ignore our .env files in Git because .gitignore files are text files that tells Git which files or folders to ignore in a project
+
+3. Should you ever upload passwords of any kind to github?
+No that would be a security risk since by uploading it on git we make it accessible for others to retrieve.
+
+4. What is SQL injection?
+It is when a hacker tries to run malicious sql code in a database. 
+
+
+5. What are prepared statements? How can we pass variables to a prepared statement?
+They are how we guard against attacks. it is a parameterized and reusable SQL query which forces the developer to write 
+the SQL command and the user-provided data separately. To pass variables to a prepared statement we first call the prepare method 
+with a sql query with any dynamic parameters subbed in with names prefixed with colons. That will then create an optimized pre-query 
+statement ready to receive values. Finally we call the execute method so we can pass it an associative array with keys and values, the 
+keys need to be the variable names we set in the prepare step, and the values will be the values we want to use in a query.
+
